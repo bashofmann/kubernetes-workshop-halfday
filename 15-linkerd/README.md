@@ -11,7 +11,6 @@ linkerd check --pre
 ```
 linkerd install | kubectl apply -f -
 ```
-* Edit hostnames in `linkerd-ingress.yaml`
 * Add Ingress for LinkerD dashboard
 ```
 kubectl apply -f linkerd-ingress.yaml

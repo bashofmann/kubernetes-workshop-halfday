@@ -2,9 +2,9 @@
 apiVersion: monitoring.coreos.com/v1
 kind: ServiceMonitor
 metadata:
-  name: web-application
+  name: web-application-<YOURNAME>
   labels:
-    app: web-application
+    app: web-application-<YOURNAME>
     release: prom
   namespace: monitoring
 spec:
@@ -15,8 +15,8 @@ spec:
       path: /metrics
   namespaceSelector:
     matchNames:
-      - web-application
+      - <YOURNAME>
   selector:
     matchLabels:
-      app: web-application
+      app: web-application-<YOURNAME>
 

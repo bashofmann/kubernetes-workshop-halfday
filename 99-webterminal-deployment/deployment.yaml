@@ -1,0 +1,34 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: webterminal-<user>
+  namespace: webterminal
+  labels:
+    app: webterminal-<user>
+    target: webterminal-<user>
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: webterminal-<user>
+      target: webterminal-<user>
+  template:
+    metadata:
+      labels:
+        app: webterminal-<user>
+        target: webterminal-<user>
+    spec:
+      serviceAccountName: webterminal
+      containers:
+      - name: webterminal
+        image: bashofmann/gotty:v2.0.0-sys11-8-1
+        imagePullPolicy: Always
+        ports:
+        - name: http
+          containerPort: 9000
+          protocol: TCP
+      securityContext:
+        fsGroup: 65534
+        runAsNonRoot: true
+        runAsUser: 1000

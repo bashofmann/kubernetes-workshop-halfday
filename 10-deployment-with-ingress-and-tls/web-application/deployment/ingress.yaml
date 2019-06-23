@@ -2,6 +2,7 @@ kind: Ingress
 apiVersion: extensions/v1beta1
 metadata:
   name: web-application
+  namespace: <YOURNAME>
   labels:
     app: web-application
     workshop: workshop

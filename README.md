@@ -2,7 +2,7 @@
 
 ## Slides
 
-https://speakerdeck.com/bastianhofmann/kubernetes-workshop-halfday
+https://speakerdeck.com/bastianhofmann/deploying-your-first-micro-service-application-to-kubernetes-ddda6008-5d8f-4b26-903c-2da2a544c8b5
 
 ## Additional tooling and resources
 
